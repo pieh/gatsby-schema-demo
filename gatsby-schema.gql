@@ -1,0 +1,31 @@
+union FileOrMarkdown = LocalFile | MarkdownRemark
+
+# types don't need to be fully defined
+# field types that are not defined will be inferred
+type MarkdownRemark {
+  #force frontmatter field type so we can define field types
+  frontmatter: frontmatter 
+}
+
+type frontmatter {
+  # direct values
+  string: String
+  int: Int
+  date: Date
+  arrayOfString: [String] 
+  arrayOfNumbers: [Int]
+  notUsedField: String
+  customType: CustomType
+
+  # linked nodes
+  localFile: LocalFile 
+  union: FileOrMarkdown
+}
+
+type CustomType {
+  string: String
+  float: Float
+  int: Int
+  bool: Boolean
+}
+

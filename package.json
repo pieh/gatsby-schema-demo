@@ -1,0 +1,42 @@
+{
+  "name": "gatsby-starter-blog",
+  "description": "Starter Gatsby Blog",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
+  },
+  "dependencies": {
+    "gatsby": "^1.9.203",
+    "gatsby-source-filesystem": "^1.5.20",
+    "gatsby-transformer-remark": "^1.7.33",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.0",
+    "eslint-plugin-react": "^7.7.0",
+    "gh-pages": "^1.1.0",
+    "prettier": "^1.10.2"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+  },
+  "scripts": {
+    "dev": "gatsby develop",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages",
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
+    "core-dev": "gatsby-dev --packages gatsby"
+  }
+}
